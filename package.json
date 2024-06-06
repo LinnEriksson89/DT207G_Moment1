@@ -1,0 +1,28 @@
+{
+  "name": "dt207g_moment1",
+  "version": "1.0.0",
+  "description": "Moment 1 i kursen backend-baserad webbutveckling.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Hello World!\"", 
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinnEriksson89/DT207G_Moment1.git"
+  },
+  "author": "Linn Eriksson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LinnEriksson89/DT207G_Moment1/issues"
+  },
+  "homepage": "https://github.com/LinnEriksson89/DT207G_Moment1#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
