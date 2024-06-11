@@ -2,3 +2,239 @@
  * Moment 1
  * Linn Eriksson, VT24
  */
+
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Space+Mono");
+
+/*General "settings" such as border-box etc.*/
+html {
+    font-size: 62.5%; /*62.5% of 16px => 10px*/
+    box-sizing: border-box;
+    background-color: #207;
+    color: #207;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+/*Mobile-first design*/
+#wrapper {
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+/*Hides skiplink on mobile*/
+.skiplink {
+    display: none;
+}
+
+/*Headers and their sizes and colors*/
+
+h1 {
+    font-size: 3.2em;
+    font-family: 'Space Mono', 'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-size: 2.4em;
+    border-bottom: 2px solid #207;
+    font-family: 'Space Mono', 'Courier New', Courier, monospace;
+}
+
+h3 {
+    font-size: 1.8em;
+    font-family: 'Space Mono', 'Courier New', Courier, monospace;
+}
+
+/*Header-design*/
+header {
+    text-align: center;
+    padding: 2%;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/*Menu-design*/
+nav {
+    margin: 0;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #207;
+}
+
+nav li {
+    padding: 2%;
+    margin: 0;
+    background-color: #207;
+}
+
+nav a:link, nav a:visited {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.current {
+    background-color: #89f;
+}
+
+.current a:link, .current a:visited {
+    color: #207;
+}
+
+/*Text-size in paragraphs, lists, forms and tables.*/
+p, ul, form, table {
+    font-size: 1.6em;
+}
+
+/*Layout of links*/
+a:link {
+    color: #207;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover, a:active {
+    text-decoration: overline underline;
+    color: #000;
+
+}
+
+/*General layout*/
+main, form {
+    padding: 2%;
+}
+
+/*Layout of tables*/
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+}
+
+thead {
+    text-align: left;
+}
+
+.progression {
+    text-align: center;
+}
+
+thead, tr:nth-child(even) {
+    background-color: #89f;
+}
+
+td, th, tr {
+    padding: 1%;
+}
+
+tr:hover, tr:hover a:link, tr:hover a:visited {
+    background-color: #207;
+    color: #f1f1f1;
+}
+
+/*Layout of forms*/
+input[type=text] {
+    border: 2px solid #207;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    padding: 1%;
+    margin: 1%;
+}
+
+input[type=text]:focus {
+    background-color: #89f;
+}
+
+/*Fieldset looks drawn out on most screens, correction here.*/
+fieldset {
+    max-width: 350px;
+}
+
+/*Buttons-design*/
+.button {
+    padding: 2% 8%;
+    margin: 1%;
+    font-weight: bold;
+    background-color: #207;
+    border: 2px soldid #89f;
+    border-radius: 10px;
+    color: #f1f1f1;
+}
+
+.button:focus {
+    border-color: #207;
+    color: #207;
+    background-color: #89f;
+}
+
+/*Footer-design*/
+footer {
+    text-align: center;
+    padding: 2%;
+}
+
+/*Non-mobile layout*/
+@media only screen and (min-width: 750px) {
+
+    /*Skiplink can now be used.*/
+    .skiplink {
+        display: inline;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+
+    .skiplink:focus {
+        width: auto;
+        height: auto;
+        font-size: 1.6em;
+        text-align: center;
+        padding: 2%;
+        margin: 10px, 0, 0, 10px;
+        z-index: 99;
+    }
+
+    /*Main-design*/
+    #wrapper {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    /*Give navigation the look of a tab-system*/
+    
+    nav {
+        border-top: 5px solid #207;
+        border-bottom: 10px solid #89f;
+    }
+
+    nav li {
+        margin: 0 10px;
+        border-radius: 10px 10px 0 0;
+        display: inline-block;
+    }
+
+    /*Shorter paragraphs for readability*/
+    p {
+        width: 60%;
+    }
+    
+    /*Except the one in header and footer that should be short and centered.*/
+    footer p, header p {
+        width: 100%;
+    }
+
+}

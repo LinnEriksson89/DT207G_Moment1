@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/png" href="images/favicon.ico">
-    <title><%=title %></title>
+    <title>
+        <%=title %>
+    </title>
 </head>
+
 <body>
     <div id="wrapper">
         <header>
+            <a href="#maincontent" class="skiplink button">Gå till huvudinnehåll</a>
             <h1>Backend-baserad webbutveckling - DT207G</h1>
             <p>Moment 1</p>
         </header>
@@ -18,12 +22,31 @@
             <ul>
                 <li><a href="/">Startsida</a></li>
                 <li><a href="/about">Om sidan</a></li>
-                <li><a href="/addcourse" class="current">Lägg till kurs</a></li>
+                <li class="current"><a href="/addcourse">Lägg till kurs</a></li>
             </ul>
         </nav>
         <main id="maincontent">
             <h2>Lägg till kurs</h2>
-            <p></p>
+            <p>För att lägga till en kurs måste du fylla i alla delar av formuläret. När du har lagt till en kurs
+                skickas du vidare till startsidan där du kan se den tillagda kursen.</p>
+            <p>Kurskod kan ha max 8 tecken, kursnamn max 64 tecken och progression anges bara som A eller B.</p>
+            <form method="post" action="/addcourse">
+                <fieldset>
+                    <legend>Ny kurs:</legend>
+                    <label for="course_code">Kurskod:</label>
+                    <input type="text" id="course_code" name="course_code" maxlength="8" required>
+                    <br>
+                    <label for="course_name">Kursnamn:</label>
+                    <input type="text" id="course_name" name="course_name" maxlength="64" required>
+                    <br>
+                    <label for="progression">Progression:</label>
+                    <input type="text" id="progression" name="progression" maxlength="1" required>
+                    <br>
+                    <br>
+                    <input type="reset" value="Rensa" class="button"><input type="submit" value="Lägg till"
+                        id="submit_course" class="button">
+                </fieldset>
+            </form>
         </main>
         <footer>
             <p>Webbplats skapad som en del av <a
@@ -32,4 +55,5 @@
         </footer>
     </div>
 </body>
+
 </html>
